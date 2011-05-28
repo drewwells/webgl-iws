@@ -2,11 +2,41 @@
 <html>
 <head>
 <style>
+html,body, div{
+    margin: 0;
+    padding: 0;
+
+}
+html, body {
+  font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+height: 100%;
+width: 100%;
+}
+h1,h2,h3 {
+  display: inline-block;
+}
+header {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, 
+    0% 0%, 0% 100%, 
+    from(#ccc), 
+    to(rgba(150, 150, 150, 0.8)));
+  background: -moz-linear-gradient(center top , #ccc, rgba(150, 150, 150, 0.8));
+  border: solid #ccc;
+  border-width: 0 0 1px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.9);
+  z-index: 10;
+}
 .earth {
-    width:600px;
-    height:400px;
-    border:1px solid gray;
-    padding:2px;
+    width: 49.5%;
+    height: 99.5%;
+    border: solid gray;
+    border-width: 0 1px 0;
+    float: left;
     background-image: -webkit-gradient(
         linear,
         left bottom,
@@ -17,23 +47,30 @@
         color-stop(0.56, rgb(255,255,255)),
         color-stop(1, rgb(253,253,253))
     );
-    background-image: -moz-linear-gradient(
-        center bottom,
-        rgb(253,253,253) 0%,
-        rgb(253,253,253) 15%,
-        rgb(223,223,223) 53%,
-        rgb(255,255,255) 56%,
-        rgb(253,253,253) 100%
-    );
-  }
+}
+
+.ribbon img{
+-webkit-transform: rotate(90deg);
+}
 </style>
-<script src="http://www.webglearth.com/api.js"></script>
+<link rel="stylesheet" href="ribbon.css" />
+<!-- It's becoming super slow, pulling locally <script src="http://www.webglearth.com/api.js"></script>-->
+<script src="api.js"></script>
 </head>
 <body >
-  <div class="earth" id="earth_div" style="float: left; width:48%;height:800px;border:1px solid gray; padding:2px;"></div>
-  <div class="earth" id="earth_div2" style="float: left; width:48%;height:800px;border:1px solid gray; padding:2px;"></div>
+    <header>
+	<h1>WebGL Earth</h1>
+	<a id="project" href="http://www.webglearth.org/">OpenSource Project</a> powered by 
+	<h3><a href="http://iws.erdas.com/">ERDAS IWS WMTS Service</a></h3>
+	<div class="right ribbon-holder">
+	    <a href="http://github.com/drewwells/WebGL-IWS" class="orange ribbon">
+		<span class="text">Fork me on GitHub</span>
+	    </a>
+	</div>
+    </header>
+    <div class="earth" id="earth_div"></div>
+    <div class="earth" id="earth_div2"></div>
 </body>
-<script type="text/javascript" src="main.js">
-</script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>
