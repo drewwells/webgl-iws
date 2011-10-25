@@ -21,9 +21,9 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, 
-    0% 0%, 0% 100%, 
-    from(#ccc), 
+  background-image: -webkit-gradient(linear,
+    0% 0%, 0% 100%,
+    from(#ccc),
     to(rgba(150, 150, 150, 0.8)));
   background: -moz-linear-gradient(center top , #ccc, rgba(150, 150, 150, 0.8));
   border: solid #ccc;
@@ -54,13 +54,14 @@ header {
 }
 </style>
 <link rel="stylesheet" href="ribbon.css" />
-<!-- It's becoming super slow, pulling locally <script src="http://www.webglearth.com/api.js"></script>-->
-<script src="api.js"></script>
+<!-- It's becoming super slow, pulling locally-->
+<script src="http://www.webglearth.com/api.js"></script>
+<!--<script src="../webglearth/api/api.js"></script>-->
 </head>
-<body >
+<body onload="initialize();">
     <header>
 	<h1>WebGL Earth</h1>
-	<a id="project" href="http://www.webglearth.org/">OpenSource Project</a> powered by 
+	<a id="project" href="http://www.webglearth.org/">OpenSource Project</a> powered by
 	<h3><a href="http://iws.erdas.com/">ERDAS IWS WMTS Service</a></h3>
 	<div class="right ribbon-holder">
 	    <a href="http://github.com/drewwells/WebGL-IWS" class="orange ribbon">
