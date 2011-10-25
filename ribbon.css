@@ -1,113 +1,112 @@
 @font-face {
-  font-family: Collegiate;
-  src: url("Collegiate.ttf");
+    font-family: Collegiate;
+    src: url("Collegiate.ttf");
 }
 
-.ribbon-holder {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  height: 10em;
-}
-
-.right.ribbon-holder {
-  right: 0;
-}
-
-.left.ribbon-holder {
-  left: 0;
-}
-
-.ribbon,
-.ribbon:hover {
-  text-decoration: none;
-}
 
 .ribbon {
-  font-family: Collegiate, sans-serif;
-  letter-spacing: -.1px;
-  opacity: 0.95;
+    font-family: Collegiate, sans-serif;
+    /*background-color: #a00;*/
+    overflow: hidden;
+    /* top left corner */
+    position: absolute;
+    /*left: -3em;*/
+    top: 2.5em;
+    /* 45 deg ccw rotation */
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    /* shadow */
+    -moz-box-shadow: 0 0 1em #888;
+    -webkit-box-shadow: 0 0 1em #888;
 
-  padding: 0.25em 0;
-  position: relative;
-  top: 2.5em;
+    letter-spacing: .3px;
+    opacity: 0.95;
 
-  /* Defaults friendly for white pages. */
-  -moz-box-shadow: 0 0 13px #888;
-  -webkit-box-shadow: 0 0 13px #888;
-  color: #FFF;
+    padding: 0.1em 0;
+    color: #FFF;
 }
 
-.ribbon .text {
-  padding: 0.1em 3em;
+.ribbon a {
+    border: 1px solid #faa;
+    color: #fff;
+    /*display: block;*/
+    font: 1em 'Collegiate', Arial, sans-serif;
+    display: inline-block;
+    margin: 0.05em 0 0.175em 0;
+    padding: 0.15em 2.5em;
+    text-align: center;
+    text-decoration: none;
+/* shadow */
+/*text-shadow: 0 0 0.5em #444;*/
 }
 
-.right .ribbon {
-  -moz-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  right: -2.5em;
+.right.ribbon {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    right: -2.5em;
 }
 
 .left .ribbon {
-  -moz-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  left: -2.5em;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    left: -2.5em;
 }
 
 .white.ribbon {
-  color: #111;
-  background-color: #F5F5F5;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(#fff));
-  -moz-box-shadow: 0 0 13px #999;
-  -webkit-box-shadow: 0 0 13px #999;
-  text-shadow: 0 0 .05em;
+    color: #111;
+    background-color: #F5F5F5;
+    background: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(#fff));
+    -moz-box-shadow: 0 0 13px #999;
+    -webkit-box-shadow: 0 0 13px #999;
+    text-shadow: 0 0 .05em;
 }
 
-.white.ribbon .text {
-  border: 1px solid #cecece;
+.white.ribbon a {
+    border: 1px solid #cecece;
 }
 
 .red.ribbon {
-  background-color: #9a0000;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9a0000), to(#a90000));
+    background-color: #9a0000;
+    background: -webkit-gradient(linear, left bottom, left top, from(#9a0000), to(#a90000));
 }
 
-.red.ribbon .text {
-  border: 1px solid #bf6060;
+.red.ribbon a {
+    border: 1px solid #bf6060;
 }
 
 .green.ribbon {
-  background-color: #006e00;
-  background: -webkit-gradient(linear, left bottom, left top, from(#006e00), to(#007200));
+    background-color: #006e00;
+    background: -webkit-gradient(linear, left bottom, left top, from(#006e00), to(#007200));
 }
 
-.green.ribbon .text {
-  border: 1px solid #6bac6b;
+.green.ribbon {
+    border: 1px solid #6bac6b;
 }
 
 .darkblue.ribbon {
-  background-color: #121621;
-  color: #ecedee;
+    background-color: #121621;
+    color: #ecedee;
 }
 
-.darkblue.ribbon .text {
-  border: 1px solid #53565e;
+.darkblue.ribbon a {
+    border: 1px solid #53565e;
 }
 
 .orange.ribbon {
-  background-color: #E57504;
-  background: -webkit-gradient(linear, left bottom, left top, from(#dc7202), to(#ee7906));
+    background-color: #E57504;
+    background: -webkit-gradient(linear, left bottom, left top, from(#dc7202), to(#ee7906));
 }
 
-.orange.ribbon .text {
-  border: 1px solid #ebaa65;
+.orange.ribbon a{
+
+    border: 2px dotted #ebaa65;
 }
 
 .gray.ribbon {
-  background-color: #6d6d6d;
-  background: -webkit-gradient(linear, left bottom, left top, from(#6a6a6a) to(#6d6d6d));
+    background-color: #6d6d6d;
+    background: -webkit-gradient(linear, left bottom, left top, from(#6a6a6a) to(#6d6d6d));
 }
 
-.gray.ribbon .text {
-  border: 1px solid #a4a4a4;
+.gray.ribbon a {
+    border: 1px solid #a4a4a4;
 }
